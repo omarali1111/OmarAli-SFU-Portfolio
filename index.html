@@ -1,2 +1,246 @@
-<h1>Omar Ali - Engineering Portfolio</h1>
-<p>SFU Engineering Science Student | GPA: 3.44</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar Ali | Engineering Portfolio</title>
+    <style>
+        /* --- COLOR PALETTE & VARIABLES --- */
+        :root {
+            --bg-white: #ffffff;
+            --bg-light: #f8fafc;
+            --violet: #6D28D9; /* Deep LinkedIn-style Violet */
+            --aquatic-blue: #06B6D4; /* Vibrant Aquatic Cyan */
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        /* --- GLOBAL STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-white);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            color: var(--text-main);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--aquatic-blue);
+            font-weight: 600;
+        }
+
+        a:hover {
+            color: var(--violet);
+        }
+
+        /* --- LAYOUT UTILITIES --- */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            background: linear-gradient(90deg, var(--violet), var(--aquatic-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, rgba(109, 40, 217, 0.05) 0%, rgba(6, 182, 212, 0.05) 100%);
+            border-bottom: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .hero .gpa-badge {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--violet), var(--aquatic-blue));
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* --- ABOUT ME SECTION --- */
+        .about-text {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 800px;
+        }
+
+        /* --- EDUCATION SECTION --- */
+        .edu-card {
+            background-color: var(--bg-light);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--violet);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .edu-card h3 {
+            font-size: 1.4rem;
+        }
+
+        .edu-card .school {
+            color: var(--aquatic-blue);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* --- PROJECTS SECTION --- */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: var(--bg-light);
+            padding: 25px;
+            border-radius: 12px;
+            border-top: 5px solid var(--aquatic-blue);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(6, 182, 212, 0.15);
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .project-tags {
+            margin-bottom: 15px;
+        }
+
+        .project-tags span {
+            display: inline-block;
+            background-color: rgba(109, 40, 217, 0.1);
+            color: var(--violet);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-right: 5px;
+            font-weight: bold;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Omar Ali</h1>
+            <p class="subtitle">Systems Engineering Student | Hardware & Embedded Logic</p>
+            <div class="gpa-badge">SFU GPA: 3.48 | KPU Dean's Honor Roll</div>
+        </div>
+    </header>
+
+    <section id="about" class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="about-text">
+            I am an Engineering Science student at Simon Fraser University focusing on bridging the gap between hardware design and embedded software logic. With a strong foundation in C/C++, AutoCAD, and microcontrollers, I specialize in creating high-precision technical documentation and developing autonomous automated systems. I approach every problem with an "Operator" mindset: prioritizing system stability, precision measuring, and clean execution.
+        </p>
+    </section>
+
+    <section id="education" class="container">
+        <h2 class="section-title">Education</h2>
+        
+        <div class="edu-card">
+            <h3>Bachelor of Applied Science in Engineering Science</h3>
+            <p class="school">Simon Fraser University (SFU) | Sept 2025 - Present</p>
+            <p><strong>Current Status:</strong> Maintaining a 3.48 GPA with a focus on Systems and Industrial Automation.</p>
+        </div>
+
+        <div class="edu-card">
+            <h3>Engineering Transition Program</h3>
+            <p class="school">Kwantlen Polytechnic University (KPU) | 2024 - 2025</p>
+            <p><strong>Honors:</strong> Dean's Honor Roll (Fall 2024)</p>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2 class="section-title">Technical Projects</h2>
+        
+        <div class="project-grid">
+            
+            <div class="project-card">
+                <h3>Mechanical Piston Assembly</h3>
+                <div class="project-tags">
+                    <span>AutoCAD</span> <span>Drafting</span> <span>BOM</span>
+                </div>
+                <p>Developed a comprehensive 4-sheet technical drawing set for a mechanical piston assembly. Managed complex documentation standards, precise dimensioning, and Bill of Materials coordination for manufacturing readiness.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Automated Flyer Sorter</h3>
+                <div class="project-tags">
+                    <span>Arduino IDE</span> <span>C++</span> <span>Soldering</span>
+                </div>
+                <p>Engineered an industrial sorting prototype by soldering custom Arduino shields to interface with high-torque motors. Programmed precise motor sequences based on timing logic.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Pololu 3pi Robot Navigation</h3>
+                <div class="project-tags">
+                    <span>C Language</span> <span>Microcontrollers</span> <span>Algorithms</span>
+                </div>
+                <p>Engineered autonomous navigation algorithms in C for complex track traversal. Integrated sensor feedback with memory arrays to calculate and execute the shortest return route.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Omar Ali | Systems Grounded.</p>
+            <p><a href="https://linkedin.com/in/omar-abdolrahman-mohammad-ali-2ab909327/" target="_blank">Connect on LinkedIn</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
