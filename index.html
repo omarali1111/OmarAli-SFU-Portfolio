@@ -14,7 +14,13 @@
             --text-main: #1e293b;
             --text-muted: #64748b;
         }
-
+<div id="system-loader">
+        <div class="system-message">
+            <p class="sys-text seq-1">> SYSTEM_INITIALIZING...</p>
+            <p class="sys-text seq-2">> SYNC_RATE: <span class="sync-counter"></span></p>
+            <p class="sys-text seq-3" style="color: #06B6D4;">> ACCESS_GRANTED.</p>
+        </div>
+    </div>
         /* --- GLOBAL STYLES --- */
         * {
             margin: 0;
@@ -194,6 +200,63 @@
             width: 28px;
             height: 28px;
             fill: currentColor; /* Inherits the color from the 'a' tag */
+        }
+        /* --- SOLO LEVELING SYSTEM LOADER --- */
+        #system-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #0f172a; /* Dark system background */
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Fades out the whole black screen after 2.5s */
+            animation: fadeOutLoader 0.4s ease 2.5s forwards; 
+        }
+
+        .system-message {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--violet); /* Uses your custom LinkedIn Violet */
+        }
+
+        .sys-text {
+            opacity: 0;
+            margin-bottom: 12px;
+        }
+
+        /* Sequence Timings */
+        .seq-1 { animation: popIn 0.1s forwards 0.2s; } /* Appears at 0.2s */
+        .seq-2 { animation: popIn 0.1s forwards 0.6s; } /* Appears at 0.6s */
+        .seq-3 { animation: popIn 0.1s forwards 1.8s; } /* Appears at 1.8s */
+
+        /* The 0 to 100% Counter Animation */
+        .sync-counter::after {
+            content: "0%";
+            animation: countUp 1s forwards 0.6s; /* Syncs up with seq-2 */
+        }
+
+        @keyframes popIn {
+            to { opacity: 1; }
+        }
+
+        @keyframes countUp {
+            0% { content: "0%"; }
+            25% { content: "25%"; }
+            50% { content: "50%"; }
+            75% { content: "75%"; }
+            100% { content: "100%"; }
+        }
+
+        @keyframes fadeOutLoader {
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
         }
     </style>
 </head>
